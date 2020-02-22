@@ -7,3 +7,7 @@
 - 7th question asking to guess a name , you have 4 correct anwser you should solve with 6 attempt else anwser pop up in alert message .
 
 
+- Update ## lab05b :
+- play around CSS style 
+- add some images .
+- make font larger when mouse hover on it.
