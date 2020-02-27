@@ -106,7 +106,9 @@ var Q5 = (function q5() {
     ();
 
 var Q6 = (function q6() {
-    var game = prompt('This is guess game : choose number', '0 through 9');
+
+    var game = parseInt(prompt('This is guess game : choose number', '0 through 9'));
+
     var LOOP = 1;
     var rand = (Math.floor(Math.random() * 10));
     if (game == rand) {
@@ -115,17 +117,22 @@ var Q6 = (function q6() {
 
     } else {
         for (LOOP; LOOP <= 4; LOOP++) {
-            game = prompt(`Attempt ${LOOP} This is guess game : choose number`, '0 through 9');
 
+            game = parseInt(prompt('This is guess game : choose number', '0 through 9'));
+
+            console.log("1" + game);
             if (game < rand) {
                 alert('TRY AGAIN THAT wrong');
                 alert('Too low');
+
             } else if (game > rand) {
                 alert('TRY AGAIN THAT wrong');
                 alert('Too high');
+
             } else if (game == rand) {
                 alert('YOU ARE REAlly AWESOME THAT RIGHT');
                 score = score + 1;
+
 
                 break;
             }
@@ -141,50 +148,49 @@ var Q6 = (function q6() {
 
 
 
-     
 
 
 
 
-        var Q7 = (function q7() {
-            var Length_array = 0;
-            var array = ['mohamad', 'ahmad', 'ammar', 'amjad'];
+
+var Q7 = (function q7() {
+    var Length_array = 0;
+    var array = ['mohamad', 'ahmad', 'ammar', 'amjad'];
 
 
-            var game2 = prompt('Guess a name :', 'It\'s name').toLowerCase();
-            var LOOP2 = 1;
+    var game2 = prompt('Guess a name :', 'It\'s name').toLowerCase();
+    var LOOP2 = 1;
 
-            for (LOOP2; LOOP2 < 7; LOOP2++) {
-                if (game2 === array[Length_array]) {
+    for (LOOP2; LOOP2 < 7; LOOP2++) {
+        if (game2 === array[Length_array]) {
 
-                    console.log('YOU ARE REALLYYYYYYYY AWESOME THAT RIGHT');
-                    alert('YOU ARE REALLYYYYYYYY AWESOME THAT RIGHT');
-                    score = score + 1;
-                    break;
-                } else if (game2 !== array[Length_array]) {
-                    alert('TRY AGAIN THAT wrong');
-                    game2 = prompt('Guess a name :', 'It\'s name').toLowerCase();
-                    if (game2 === array[Length_array]) {
-                        console.log('YOU ARE REALLYYYYYYYY AWESOME THAT RIGHT');
-                        alert('YOU ARE REALLYYYYYYYY AWESOME THAT RIGHT');
-                        score = score + 1;
-                        break;
-                    } else if (game2 !== array[Length_array]) {
-                        alert('TRY AGAIN THAT wrong');
-                        break;
-                    }
-
-
-                    break;
-                }
-
+            console.log('YOU ARE REALLYYYYYYYY AWESOME THAT RIGHT');
+            alert('YOU ARE REALLYYYYYYYY AWESOME THAT RIGHT');
+            score = score + 1;
+            break;
+        } else if (game2 !== array[Length_array]) {
+            alert('TRY AGAIN THAT wrong');
+            game2 = prompt('Guess a name :', 'It\'s name').toLowerCase();
+            if (game2 === array[Length_array]) {
+                console.log('YOU ARE REALLYYYYYYYY AWESOME THAT RIGHT');
+                alert('YOU ARE REALLYYYYYYYY AWESOME THAT RIGHT');
+                score = score + 1;
+                break;
+            } else if (game2 !== array[Length_array]) {
+                alert('TRY AGAIN THAT wrong');
+                break;
             }
 
 
+            break;
+        }
 
-            alert(`The right name is ${array[Length_array]}`);
+    }
 
-            alert(`Your score is ${score} out of 7`);
-        })
-            ();
-    
+
+
+    alert(`The right name is ${array[Length_array]}`);
+
+    alert(`Your score is ${score} out of 7`);
+})
+    ();
